@@ -3,12 +3,15 @@ import { HiMenu } from "react-icons/hi";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { Link, Route, Routes } from "react-router-dom";
 
-import UserProfile  from "./UserProfile";
+import { fetchUser } from "../utils/fetchUser";
 import { userQuery } from "../utils/data";
 import { client } from "../client";
+
 import Pins from "./Pins";
+import UserProfile  from "./UserProfile";
+import Sidebar from "./Sidebar";
 import logo from "../assets/logo.png";
-import { fetchUser } from "../utils/fetchUser";
+
 
 const Home = () => {
   const [toggleSidebar, setToggleSidebar] = useState(false);
@@ -32,6 +35,7 @@ const Home = () => {
   return (
     <div className="flex bg-gray-50 md:flex-row flex-col h-screen transition-height duration-75 ease-out">
       <div className="hidden md:flex h-screen flex-initial">
+      <Sidebar user={user && user} />
       </div>
       <div className="flex md:hidden flex-row">
         <div className="p-2 w-full flex flex-row justify-between items-center shadow-md">
@@ -60,6 +64,7 @@ const Home = () => {
                 onClick={() => setToggleSidebar(false)}
               />
             </div>
+            <Sidebar closeToggle={setToggleSidebar} user={user && user} />
           </div>
         )}
       </div>

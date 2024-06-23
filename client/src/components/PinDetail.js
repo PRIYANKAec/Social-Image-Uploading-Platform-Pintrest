@@ -34,6 +34,7 @@ const PinDetail = ({ user }) => {
 
   useEffect(() => {
     fetchPinDetails();
+    // eslint-disable-next-line
   }, [pinId]);
 
   const addComment = () => {

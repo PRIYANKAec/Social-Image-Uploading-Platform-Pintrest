@@ -5,11 +5,8 @@
   "main": "package.json",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "sanity dev",
-    "start": "sanity start",
-    "build": "sanity build",
-    "deploy": "sanity deploy",
-    "deploy-graphql": "sanity graphql deploy"
+    "dev": "nodemon indesx.js",
+    "build": "npm i "
   },
   "keywords": [
     "sanity"

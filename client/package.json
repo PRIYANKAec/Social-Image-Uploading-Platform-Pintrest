@@ -12,6 +12,7 @@
     "gapi-script": "^1.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-google-login": "^5.2.2",
     "react-icons": "^5.2.1",
     "react-loader-spinner": "^6.1.6",
     "react-masonry-css": "^1.0.16",

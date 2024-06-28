@@ -6,6 +6,7 @@ import shareVideo from "../assets/share.mp4";
 import logo from "../assets/logowhite.png";
 import { gapi } from "gapi-script";
 import { client } from "../client";
+import { jwtDecode } from "jwt-decode";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -19,14 +20,16 @@ const Login = () => {
       });
     });
   }, []);
+
   const responseGoogle = (response) => {
-    localStorage.setItem("user", JSON.stringify(response.profileObj));
-    const { name, googleId, imageUrl } = response.profileObj;
+    console.log(response);
+    localStorage.setItem("user", JSON.stringify(response));
+    const { given_name, sub, picture } = response;
     const doc = {
-      _id: googleId,
+      _id: sub,
       _type: "user",
-      userName: name,
-      image: imageUrl,
+      userName: given_name,
+      image: picture,
     };
     client.createIfNotExists(doc).then(() => {
       navigate("/", { replace: true });
@@ -54,18 +57,16 @@ const Login = () => {
           <div className="shadow-2xl">
             <GoogleLogin
               clientId={`${process.env.REACT_APP_GOOGLE_API_TOKEN}`}
-              render={(renderProps) => (
-                <button
-                  type="button"
-                  className="bg-mainColor flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none"
-                  onClick={renderProps.onClick}
-                  disabled={renderProps.disabled}
-                >
-                  <FcGoogle className="mr-4" /> Sign in with google
-                </button>
-              )}
-              onSuccess={responseGoogle}
-              onFailure={responseGoogle}
+              onSuccess={credentialResponse => {
+                  const credentialResponseDecoded = jwtDecode(
+                    credentialResponse.credential
+                  )
+                console.log(credentialResponseDecoded);
+                responseGoogle(credentialResponseDecoded);
+                }}
+              onFailure={() => {
+                console.log('Login Failed');
+              }}
               cookiePolicy="single_host_origin"
             />
           </div>

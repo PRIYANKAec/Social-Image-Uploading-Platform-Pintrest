@@ -1,10 +1,11 @@
 import React from 'react';
-import { Circles } from 'react-loader-spinner';
+import Loader from 'react-loader-spinner';
 
 function Spinner({ message }) {
   return (
     <div className="flex flex-col justify-center items-center w-full h-full">
-      <Circles
+      <Loader
+        type="Circles"
         color="#00BFFF"
         height={50}
         width={200}

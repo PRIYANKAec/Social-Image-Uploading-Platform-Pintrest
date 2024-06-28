@@ -27,6 +27,7 @@ const Search = ({ searchTerm }) => {
 
   return (
     <div>
+
       {loading && <Spinner message="Searching pins" />}
       {pins?.length !== 0 && <MasonryLayout pins={pins} />}
       {pins?.length === 0 && searchTerm !== '' && !loading && (

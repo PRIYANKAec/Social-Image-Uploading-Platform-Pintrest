@@ -19,7 +19,8 @@ const UserProfile = () => {
   const navigate = useNavigate();
   const { userId } = useParams();
 
-  const User = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
+  const storedUserData = localStorage.getItem('user');
+  const User = storedUserData && storedUserData !== 'undefined' ? JSON.parse(storedUserData) : null;
 
   useEffect(() => {
     const query = userQuery(userId);
@@ -59,8 +60,8 @@ const UserProfile = () => {
           <div className="relative flex flex-col mb-7">
             <div className="flex flex-col justify-center items-center">
               <img
-                className=" w-full h-370 2xl:h-510 shadow-lg object-cover"
-                src="https://source.unsplash.com/1600x900/?nature,photography,technology"
+                className=" w-full h-44 2xl:h-510 shadow-lg object-cover"
+                src="https://images.unsplash.com/photo-1503965830912-6d7b07921cd1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="user-pic"
               />
               <img
@@ -73,7 +74,7 @@ const UserProfile = () => {
               {user.userName}
             </h1>
             <div className="absolute top-0 z-1 right-0 p-2">
-              {userId === User.googleId && (
+              {userId === User._id && (
                 <button
                   type="button"
                   className=" bg-white p-2 rounded-full cursor-pointer outline-none shadow-md"

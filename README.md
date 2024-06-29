@@ -2,6 +2,8 @@
 
 This project has the multiple features like google login, image uploding , separating images with the specified category, save the pins , delete the pins and some additional functionalities.
 
+![MasterHead](https://github.com/PRIYANKAec/Social-Image-Uploading-Platform-Pintrest/blob/main/Output_Images/Home%20Page.png)
+
 ## Tech Stacks
 
  * React Js

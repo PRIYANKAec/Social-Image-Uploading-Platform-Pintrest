@@ -31,7 +31,7 @@ Open [http://localhost:3333](http://localhost:3333) to view it in your browser.
 [https://pinterest-001.sanity.studio/](https://pinterest-001.sanity.studio/)
 
 ### Frontend Link
-[https://social-image-uploading-platform-pintrest-rfoi2xof2.vercel.app](https://social-image-uploading-platform-pintrest-rfoi2xof2.vercel.app)
+[https://social-image-uploading-platform-pintrest.vercel.app/](https://social-image-uploading-platform-pintrest.vercel.app/)
 
 
 ## Learn More

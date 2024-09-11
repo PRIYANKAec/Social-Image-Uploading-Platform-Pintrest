@@ -4,6 +4,12 @@ This project has the multiple features like google login, image uploding , separ
 
 ![MasterHead](https://github.com/PRIYANKAec/Social-Image-Uploading-Platform-Pintrest/blob/main/Output_Images/Home%20Page.png)
 
+
+
+https://github.com/user-attachments/assets/c94e760a-9f3a-4ab3-b0ce-a0d483f27e4f
+
+
+
 ## Tech Stacks
 
  * React Js
@@ -27,12 +33,11 @@ Open [http://localhost:3333](http://localhost:3333) to view it in your browser.
 
 ## Deployment Link
 
-### Backend Link
-[https://pinterest-001.sanity.studio/](https://pinterest-001.sanity.studio/)
-
 ### Frontend Link
 [https://social-image-uploading-platform-pintrest.vercel.app/](https://social-image-uploading-platform-pintrest.vercel.app/)
 
+### Backend Link
+[https://pinterest-001.sanity.studio/](https://pinterest-001.sanity.studio/)
 
 ## Learn More
 

@@ -5,7 +5,6 @@ This project has the multiple features like google login, image uploding , separ
 ![MasterHead](https://github.com/PRIYANKAec/Social-Image-Uploading-Platform-Pintrest/blob/main/Output_Images/Home%20Page.png)
 
 
-
 https://github.com/user-attachments/assets/c94e760a-9f3a-4ab3-b0ce-a0d483f27e4f
 
 
